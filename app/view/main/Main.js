@@ -94,7 +94,7 @@ Ext.define('MsTraining.view.main.Main', {
                iconCls: 'fa-user',
                 items: [
                            {
-                               xtype: 'postgrid'
+                               xtype: 'todogrid'
                             }
                        ]
     },{

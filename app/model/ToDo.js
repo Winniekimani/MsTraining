@@ -4,12 +4,6 @@ Ext.define('MsTraining.model.ToDo',{
     fields:[
         'id','userId','title','completed'
     ],
-    proxy: {
-        type: 'rest', // type of call
-        url: 'https://jsonplaceholder.typicode.com/todos',
-        reader: {
-            type: 'json',
-        }
-    }
+
 
 })
