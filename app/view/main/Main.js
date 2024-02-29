@@ -97,7 +97,15 @@ Ext.define('MsTraining.view.main.Main', {
                                xtype: 'todogrid'
                             }
                        ]
-    },{
+    }, {
+               title: 'Albums',
+               iconCls: 'fa-user',
+               items: [
+                                 {
+                                     xtype: 'albumgrid'
+                                  }
+                             ]
+          },{
         title: 'Groups',
         iconCls: 'fa-users',
         bind: {
