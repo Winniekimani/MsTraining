@@ -4,7 +4,7 @@ Ext.define("MsTraining.view.demo.CustomWindow",{
     title: "My Custom Title",
     height: 200,
     width: 520,
-    autoShow: true,
+    //autoShow: true,
     closable: true, // enables you to have x on the window 
     maximizable:true,  // []
     // maximized:true
