@@ -4,6 +4,7 @@ Ext.define('MsTraining.model.Post',{
     fields:[
         'id','userId','title','body'
     ],
+
     proxy: {
         type: 'rest', // type of call
         url: 'https://jsonplaceholder.typicode.com/posts',
