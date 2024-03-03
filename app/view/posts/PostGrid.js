@@ -10,7 +10,12 @@ Ext.define('MsTraining.view.posts.PostGrid', {
             listeners:{
                 click: 'onAddPostClicked'
             }
-        }],
+        },{
+                text: 'Form fields',
+                listeners: {
+                    click: 'onFormFieldsClicked'
+                }
+            }],
     columns: [
         { dataIndex: 'id', text: 'ID' },
         { dataIndex: 'title', text: 'Title', flex: 1 },

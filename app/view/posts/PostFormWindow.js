@@ -14,6 +14,7 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
             itemId:'postform',
             jsonSubmit:true,
             bodyPadding: 10,
+            modelValidation: true,
             items: [
                 {
                     allowBlank: true,
@@ -49,7 +50,7 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
 
         }],
         buttons: [
-          
+
             {
                 text: 'Clear',
                 handler: 'onClearClick'
