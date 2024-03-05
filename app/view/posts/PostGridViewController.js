@@ -18,7 +18,8 @@ Ext.define('MsTraining.view.posts.PostGridViewController',{
       onLayoutsClicked:function(btn,e,eOpts){
               Ext.create({
               /* xtype: "hboxvboxlayout",*/
-               xtype: "borderlayout",
+               xtype: "checkoutform",
+              /* xtype: "borderlayout",*/
                //xtype: "accordionlayout",
                 });
        },
