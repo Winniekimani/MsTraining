@@ -1,6 +1,6 @@
 Ext.define('MsTraining.model.ToDo',{
     extend: 'Ext.data.Model',
-    idProperty: 'id',
+    idProperty: '_id',
     fields:[
         '_id','userId','title','completed'
     ],

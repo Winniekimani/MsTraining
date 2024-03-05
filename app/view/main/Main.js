@@ -85,9 +85,9 @@ Ext.define('MsTraining.view.main.Main', {
         title: 'Posts',
         iconCls: 'fa-user',
          items: [
-                    {
+                   /* {
                         xtype: 'postgrid'
-                     }
+                     }*/
                 ]
     }, {
                title: 'Layouts',
@@ -115,11 +115,13 @@ Ext.define('MsTraining.view.main.Main', {
                                   }
                              ]
           },{
-        title: 'Groups',
+        title: 'Static Data Management',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+         items: [
+                        {
+                            xtype: 'parentpanel'
+                          }
+                  ]
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',
