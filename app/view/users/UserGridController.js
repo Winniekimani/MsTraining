@@ -38,5 +38,12 @@ Ext.define('MsTraining.view.users.UserGridController', {
             Ext.create({
                 xtype:'modelbindingform'
             })
-        }
+        },
+
+      onUserGridCellDblClick:function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+                console.log(record.get('username'));
+            },
+      onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+
+            }
 })
