@@ -1,6 +1,7 @@
 Ext.define('MsTraining.view.users.UserGrid',{
     extend:'Ext.grid.GridPanel',
     xtype:'usergrid',
+    reference:'usergrid',
     controller:'usergridcontroller',
     title:'Users',
     store:{
@@ -32,6 +33,10 @@ Ext.define('MsTraining.view.users.UserGrid',{
         {
             text: 'Add User'
         },
+         {
+                    text: 'Model Binding',
+                    handler: 'onModelBinding'
+           },
         //'->',
         {
         xtype:'tbfill'
@@ -39,7 +44,10 @@ Ext.define('MsTraining.view.users.UserGrid',{
 
         {
           text:'Show Details',
-          handler:'onShowDetails'
+          handler:'onShowDetails',
+           bind: {
+                          disabled: '{!usergrid.selection}'
+                   }
         }
     ],
     selModel: {
