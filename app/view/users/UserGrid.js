@@ -18,6 +18,7 @@ Ext.define('MsTraining.view.users.UserGrid',{
                         }
         },
     columns:[
+     {xtype: 'rownumberer'},
         {
             dataIndex:'_id',
             text: 'ID'
@@ -71,7 +72,8 @@ Ext.define('MsTraining.view.users.UserGrid',{
     selModel: {
       /*  selType: 'cellmodel',*/
 
-       selModel: 'rowmodel',
+          selType: 'checkboxmodel',
+       //selModel: 'rowmodel',
     },
     bbar: {
         xtype: 'pagingtoolbar',
