@@ -90,7 +90,17 @@ Ext.define('MsTraining.view.main.Main', {
                         xtype: 'employeegroupinggrid'
                      }
                 ]
-    }, {
+    },
+      {
+             title: 'Results',
+             iconCls: 'fa-user',
+              items: [
+                         {
+
+                             xtype: 'resultgrid'
+                          }
+                     ]
+         },{
                title: 'Layouts',
                iconCls: 'fa-user',
                 items: [
