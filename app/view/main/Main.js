@@ -6,138 +6,70 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('MsTraining.view.main.Main', {
-    extend: 'Ext.tab.Panel',
+     extend: 'Ext.container.Container',
     xtype: 'app-main',
 
-    requires: [
-        'Ext.plugin.Viewport',
+   /* requires: [
+       *//* 'Ext.plugin.Viewport',*//*
         'Ext.window.MessageBox',
 
         'MsTraining.view.main.MainController',
         'MsTraining.view.main.MainModel',
-        'MsTraining.view.main.List'
-    ],
+        *//*'MsTraining.view.main.List'*//*
+    ],*/
 
+    plugins: 'viewport',
     controller: 'main',
     viewModel: 'main',
-
-    ui: 'navigation',
-
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-
-    header: {
-        layout: {
-            align: 'stretchmax'
+     layout: {
+            type: 'border'
         },
-        title: {
-            bind: {
-                text: '{name}'
-            },
-            flex: 0
-        },
-        iconCls: 'fa-th-list'
-    },
-
-    tabBar: {
-        flex: 1,
-        layout: {
-            align: 'stretch',
-            overflowHandler: 'none'
-        }
-    },
-
-    responsiveConfig: {
-        tall: {
-            headerPosition: 'top'
-        },
-        wide: {
-            headerPosition: 'left'
-        }
-    },
-
-    defaults: {
-        bodyPadding: 20,
-        tabConfig: {
-            responsiveConfig: {
-                wide: {
-                    iconAlign: 'left',
-                    textAlign: 'left'
-                },
-                tall: {
-                    iconAlign: 'top',
-                    textAlign: 'center',
-                    width: 120
-                }
-            }
-        }
-    },
-
-    items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
-        title: 'Employees',
-        iconCls: 'fa-user',
-         items: [
-                    {
-                        //xtype: 'postgrid'
-                        xtype: 'employeegroupinggrid'
-                     }
-                ]
-    },
-      {
-             title: 'Results',
-             iconCls: 'fa-user',
-              items: [
-                         {
-
-                             xtype: 'resultgrid'
-                          }
-                     ]
+      items: [{
+             xtype: 'mainmenu',
+             bind: {
+                 title: '{name}'
+             },
+             region: 'west',/*
+             html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',*/
+             width: 250,
+             split: true,
+            /* tbar: [{
+                 text: 'Button',
+                 handler: 'onLogout'
+             }]*/
          },{
-               title: 'Layouts',
-               iconCls: 'fa-user',
-                items: [
-                           {
-                               xtype: 'table'
-                            }
-                       ]
-           },
-     {
-               title: 'ToDos',
-               iconCls: 'fa-user',
-                items: [
-                           {
-                               xtype: 'todogrid'
-                            }
-                       ]
-    }, {
-               title: 'Albums',
-               iconCls: 'fa-user',
-               items: [
-                                 {
-                                     xtype: 'albumgrid'
-                                  }
-                             ]
-          },{
-        title: 'Static Data Management',
-        iconCls: 'fa-users',
-         items: [
-                        {
-                            xtype: 'parentpanel'
-                          }
-                  ]
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }]
+             region: 'center',
+             xtype: 'tabpanel',
+
+             items: [
+                         {
+                           /*   xtype: 'parentpanel' */
+                         title: 'Home',
+                     },
+                     {
+                         title: 'Bar',
+                         closable:true,
+                         tabConfig: {
+                             title: 'Custom Title',
+                             tooltip: 'A button tooltip'
+                         }
+
+                     }
+                     ]
+             /*items:[{
+                 title: 'Tab 1',
+                 html: '<h2>Content appropriate for the current navigation.</h2>'
+             }]*/
+         },
+         {
+          region: 'south',
+          xtype: 'appfooter',
+         } ,
+               {
+                  region: 'north',
+                   xtype: 'appheader',
+              }
+
+         ]
+
 });
