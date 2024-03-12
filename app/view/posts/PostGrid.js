@@ -8,10 +8,25 @@ Ext.define('MsTraining.view.posts.PostGrid', {
     },
      tbar:[{
             text: 'Add Post',
+            iconCls: 'fas fa-plus',
             listeners:{
                 click: 'onAddPostClicked'
             }
-        },{
+        },
+           {
+                text: 'Edit/View Post',
+                iconCls: 'fas fa-pencil-alt',
+                listeners: {
+                    click: 'onEditClicked'
+                }
+            },
+            {
+                text: 'Delete Post',
+                iconCls: 'far fa-trash-alt',
+                listeners: {
+                    click: 'onDeleteClicked'
+                }
+            },{
                 text: 'Form fields',
                 listeners: {
                     click: 'onFormFieldsClicked'
