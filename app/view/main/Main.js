@@ -39,23 +39,7 @@ Ext.define('MsTraining.view.main.Main', {
              }]*/
          },{
              region: 'center',
-             xtype: 'tabpanel',
-
-             items: [
-                         {
-                           /*   xtype: 'parentpanel' */
-                         title: 'Home',
-                     },
-                     {
-                         title: 'Bar',
-                         closable:true,
-                         tabConfig: {
-                             title: 'Custom Title',
-                             tooltip: 'A button tooltip'
-                         }
-
-                     }
-                     ]
+             xtype: 'mainpanel',
              /*items:[{
                  title: 'Tab 1',
                  html: '<h2>Content appropriate for the current navigation.</h2>'

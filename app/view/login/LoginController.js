@@ -13,10 +13,11 @@ Ext.define('MsTraining.view.login.LoginController', {
             // Remove Login Window
             this.getView().destroy();
 
-            // Add the main view to the viewport
+           /* // Add the main view to the viewport
             Ext.create({
                 xtype: 'app-main'
-            })
+            })*/
+            Ext.widget('app-main' );
 
 
         }
