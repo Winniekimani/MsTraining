@@ -16,6 +16,11 @@ Ext.define('MsTraining.view.posts.PostGridViewController',{
                 xtype: "formfieldsdemo",
             });
         },
+         onVTypesClicked: function (btn, e, eOpts) {
+                Ext.create({
+                    xtype: "formfieldvtypevalidation",
+                });
+            },
       onLayoutsClicked:function(btn,e,eOpts){
               Ext.create({
               /* xtype: "hboxvboxlayout",*/
