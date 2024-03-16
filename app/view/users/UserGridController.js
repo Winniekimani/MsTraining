@@ -21,6 +21,7 @@ Ext.define('MsTraining.view.users.UserGridController', {
         })
     },
     onShowDetails:function(btn,e,eOpts){
+        console.log("button clicked");
         let userGrid = this.getView();
         let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
         if(userGrid.getHeight() === 800){

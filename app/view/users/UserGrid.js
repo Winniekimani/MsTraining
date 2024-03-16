@@ -7,7 +7,7 @@ Ext.define('MsTraining.view.users.UserGrid',{
     store:{
         type:'users'
     },
-    height:800,
+    height: 800,
      plugins: {
      //cell editing
            /* cellediting: {
@@ -50,7 +50,8 @@ Ext.define('MsTraining.view.users.UserGrid',{
     ],
     tbar:[
         {
-            text: 'Add User'
+            text: 'Add User',
+            handler: 'onModelBinding'
         },
          {
                     text: 'Model Binding',

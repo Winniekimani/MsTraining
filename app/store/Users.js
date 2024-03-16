@@ -1,8 +1,10 @@
 Ext.define('MsTraining.store.Users',{
     extend:'Ext.data.Store',
     alias:'store.users',
+     storeId:'users',
+    /*xtype:'users',*/
     model:'MsTraining.model.User',
-    proxy:{
+   /* proxy:{
         type:'rest',
         url:'http://localhost:3000/users',
         reader:{
@@ -10,5 +12,5 @@ Ext.define('MsTraining.store.Users',{
             rootProperty:'rows',
             totalProperty:'totalCount'
         }
-    },
+    },*/
 })

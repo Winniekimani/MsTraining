@@ -52,7 +52,13 @@ Ext.define('MsTraining.view.main.Main', {
                {
                   region: 'north',
                    xtype: 'appheader',
-              }
+              },
+
+            {
+
+
+            },
+
 
          ]
 
