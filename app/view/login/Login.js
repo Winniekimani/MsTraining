@@ -4,7 +4,7 @@ Ext.define('MsTraining.view.login.Login', {
     requires: [
         'MsTraining.view.login.LoginController',
         'Ext.form.Panel',
-          'MsTraining.util.Util'
+        'MsTraining.util.Util'
     ],
     controller: 'login',
     bodyPadding: 10,
@@ -12,42 +12,68 @@ Ext.define('MsTraining.view.login.Login', {
     closable: false,
     autoShow: true,
     draggable: false,
-     resizable: false,
-     layout: 'fit',
+    resizable: false,
+    layout: 'fit',
     items: {
-            xtype: 'form',
-            reference: 'form',
-            defaults: {
-                        afterLabelTextTpl: MsTraining.util.Util.required,
-                    },
-
-            items: [{
+        xtype: 'form',
+        reference: 'form',
+        defaults: {
+            afterLabelTextTpl: MsTraining.util.Util.required
+        },
+        items: [{
                 xtype: 'textfield',
                 name: 'username',
-                fieldLabel: 'Username',
+                fieldLabel: translations.user,
                 allowBlank: false
             },
             {
                 xtype: 'textfield',
                 name: 'password',
                 inputType: 'password',
-                fieldLabel: 'Password',
+                fieldLabel: translations.password,
                 allowBlank: false
             },
-           /* {
+            /*{
                 xtype: 'displayfield',
                 hideEmptyLabel: false,
                 value: 'Enter any non-blank password'
             }*/
-            ],
-            buttons: [{
-                text: 'Login',
+        ],
+        buttons: [{
+                xtype: 'splitbutton',
+                reference: 'lng-btn',
+                menu: {
+                    xtype: 'menu',
+                    defaults: {
+                        listeners: {
+                            click: 'onMenuItemClick'
+                        }
+                    },
+                    items: [{
+                            xtype: 'menuitem',
+                            iconCls: 'en',
+                            text: 'English'
+                        },
+                        {
+                            xtype: 'menuitem',
+                            iconCls: 'es',
+                            text: 'Español'
+                        },
+                        {
+                            xtype: 'menuitem',
+                            iconCls: 'pt_BR',
+                            text: 'Português'
+                        }
+                    ]
+                }
+            },
+            '->', {
+                text: translations.login,
                 formBind: true,
                 listeners: {
                     click: 'onLoginClick'
                 }
-            }]
-        }
-
-
-    })
+            }
+        ]
+    }
+});
