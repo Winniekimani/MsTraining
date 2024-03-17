@@ -7,7 +7,7 @@ Ext.define('MsTraining.view.users.UserGridController', {
         store.load();
     },
     onUserGridCellClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
-        let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
+        /*let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
         let todosStore = Ext.ComponentQuery.query('todogrid')[0].getStore();
         postsStore.reload({
             params: {
@@ -18,18 +18,25 @@ Ext.define('MsTraining.view.users.UserGridController', {
             params: {
                 userId: record.get('_id')
             }
-        })
+        })*/
+        let me = this,
+                    view = me.getView(),
+                    vm = me.getViewModel(),
+                    refs = me.getReferences();
+                vm.set("record",record)
     },
     onShowDetails:function(btn,e,eOpts){
         console.log("button clicked");
         let userGrid = this.getView();
-        let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
-        if(userGrid.getHeight() === 800){
+       /* let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
+        if(userGrid.getHeight() === 800){*/
+        let lowerPanel = Ext.ComponentQuery.query('userdetailstab')[0];
+         if (userGrid.getHeight() === 600) {
             userGrid.setHeight(400)
             lowerPanel.setHeight(400)
             btn.setText("Hide Details")
         }else{
-            userGrid.setHeight(800)
+            userGrid.setHeight(600)
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }
