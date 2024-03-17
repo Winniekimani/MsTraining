@@ -33,6 +33,7 @@ Ext.define('MsTraining.view.main.Main', {
              html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',*/
              width: 250,
              split: true,
+              collapsible: true,
             /* tbar: [{
                  text: 'Button',
                  handler: 'onLogout'

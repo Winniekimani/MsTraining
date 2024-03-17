@@ -33,6 +33,11 @@ Ext.define('MsTraining.view.login.Login', {
                 fieldLabel: translations.password,
                 allowBlank: false
             },
+            {
+
+                        xtype:'datefield',
+                        fieldLabel:'Date'
+              },
             /*{
                 xtype: 'displayfield',
                 hideEmptyLabel: false,
