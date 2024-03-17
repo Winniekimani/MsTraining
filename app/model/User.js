@@ -18,8 +18,8 @@ Ext.define('MsTraining.model.User', {
             url: 'resources/user-order.json',
             reader: {
                 type: 'json',
-              /*  rootProperty: 'rows',
-                totalProperty: 'totalCount'*/
+               rootProperty: 'rows',
+                totalProperty: 'totalCount'
             }
         },
         hasMany: 'MsTraining.model.Order'
