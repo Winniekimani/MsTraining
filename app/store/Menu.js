@@ -12,7 +12,8 @@ Ext.define('MsTraining.store.Menu',{
                     {
                         text:'Users',
                         iconCls:'fa fa-users',
-                        className:'usergrid',
+                      /*  className:'usergrid',*/
+                         className:'users',
                         leaf:true
                     },
                     {

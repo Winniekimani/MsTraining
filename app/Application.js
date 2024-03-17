@@ -34,5 +34,21 @@ Ext.define('MsTraining.Application', {
           xtype: loggedIn ? 'app-main' : 'login'
         })*/
          Ext.widget(loggedIn ? 'app-main' : 'login');
-      }
+      },
+
+       defaultToken: 'home',
+        listen: {
+          global: {
+            unmatchedroute: 'onUnmatchedRoute'
+          }
+        },
+
+        onUnmatchedRoute: function (token) {
+          Ext.Msg.show({
+            title: 'Failure',
+            msg: 'Unknown path: /' + token,
+            buttons: Ext.Msg.OK,
+            icon: Ext.Msg.ERROR
+          });
+          }
 });
